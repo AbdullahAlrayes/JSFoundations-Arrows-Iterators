@@ -52,9 +52,9 @@ const hottestDays = function (temperatures, threshhold) {
  *       all previous functions
  *******************************************/
 const logHottestDays = function (temperatures, threshhold) {
-  return temperatures.forEach(
-    (item) => item > threshhold && console.log((item - 32) * (5 / 9))
-  );
+  const hotList = hottestDays(temperatures, threshhold);
+  const newDegree = toCelsius(hotList);
+  logger(newDegree);
 };
 
 /* Uncomment the following lines to test your code... */
